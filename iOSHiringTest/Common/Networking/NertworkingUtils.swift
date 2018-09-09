@@ -6,4 +6,12 @@
 //  Copyright © 2018 wonderlabs. All rights reserved.
 //
 
-import Foundation
+import Moya
+
+let networkActivityClosure = NetworkActivityPlugin { change, target  in
+    if change == .began {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    } else {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}

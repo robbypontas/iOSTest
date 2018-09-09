@@ -1,10 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aEB-7B-c9y" customClass="UserImageCollectionViewCell" customModule="iOSHiringTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="156"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hb5-8w-ypZ">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="156"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Hb5-8w-ypZ" firstAttribute="top" secondItem="K0U-sx-Gps" secondAttribute="top" id="6J3-Hx-a6Q"/>
+                <constraint firstItem="Hb5-8w-ypZ" firstAttribute="trailing" secondItem="K0U-sx-Gps" secondAttribute="trailing" id="CWX-Qr-4kw"/>
+                <constraint firstItem="Hb5-8w-ypZ" firstAttribute="leading" secondItem="K0U-sx-Gps" secondAttribute="leading" id="G6F-6Y-vv8"/>
+                <constraint firstItem="K0U-sx-Gps" firstAttribute="bottom" secondItem="Hb5-8w-ypZ" secondAttribute="bottom" id="y6h-AG-Raw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="K0U-sx-Gps"/>
+            <size key="customSize" width="164" height="156"/>
+            <connections>
+                <outlet property="image" destination="Hb5-8w-ypZ" id="QRX-jo-pFP"/>
+            </connections>
+            <point key="canvasLocation" x="-67" y="-3"/>
+        </collectionViewCell>
     </objects>
 </document>

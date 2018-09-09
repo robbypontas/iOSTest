@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="268" id="3eM-Uh-aGt">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="268" id="3eM-Uh-aGt" customClass="UserTableViewCell" customModule="iOSHiringTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3eM-Uh-aGt" id="G99-jg-DHP">
@@ -31,9 +31,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kH3-pG-tiU">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kH3-pG-tiU" customClass="UserImageCollectionView" customModule="iOSHiringTest" customModuleProvider="target">
                         <rect key="frame" x="16" y="105" width="343" height="142.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="142.5" id="Gqb-Ef-XWI"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lcX-UJ-aaW">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -54,6 +57,12 @@
                     <constraint firstAttribute="trailing" secondItem="kH3-pG-tiU" secondAttribute="trailing" constant="16" id="xd1-Sb-UOi"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="constraintsHeight" destination="Gqb-Ef-XWI" id="J1p-eA-cwr"/>
+                <outlet property="imageAvatar" destination="9Ss-Ph-rGC" id="Sec-0z-qyW"/>
+                <outlet property="imageCollectionView" destination="kH3-pG-tiU" id="Ajp-2h-aFQ"/>
+                <outlet property="labelUsername" destination="93j-Bl-tWJ" id="VoR-aB-V6J"/>
+            </connections>
             <point key="canvasLocation" x="-21.5" y="68"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,6 @@ import Foundation
 
 struct BaseModel<T: Codable>: Codable {
     var status: Bool
-    var message: String
+    var message: String?
     var data: T
 }

@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class Constants {
+    static let REQUEST_LIMIT = 10
+}
